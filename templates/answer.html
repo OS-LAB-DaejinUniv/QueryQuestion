@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini LLM 답변</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; }
+        .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #0056b3; }
+        h2 { color: #007bff; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 30px; }
+        p { line-height: 1.6; margin-bottom: 10px; }
+        .question-box, .answer-box {
+            background-color: #e9e9e9;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .answer-box {
+            background-color: #dff0d8;
+            border-left-color: #28a745;
+        }
+        pre {
+            white-space: pre-wrap; /* 줄 바꿈 처리 */
+            word-wrap: break-word; /* 긴 단어 줄 바꿈 */
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini LLM 답변 서비스</h1>
+
+        <h2>질문:</h2>
+        <div class="question-box">
+            <p><strong>{{ question }}</strong></p>
+        </div>
+
+        <h2>답변:</h2>
+        <div class="answer-wrapper">
+             <pre>{{ answer | safe}}</pre>
+        </div>
+    </div>
+</body>
+</html>
